@@ -1,0 +1,252 @@
+@import url("meyer-reset.css");
+
+body {
+	/*display: none; /* NOTE!!! This is in here cause it is kinda funny, HOWEVER
+						If javascript is not ENABLED this will cause the page to hide
+						forever */
+	background-color: #f4f4f4;
+	font-family: Helvetica, Arial, sans-serif !important;
+
+		font-family: Arial, Tahoma, Helvetica, sans-serif;
+		font-size: 75%;
+}
+
+#layout-login-top {
+	background-image: url(../images/layout/menubg.png);
+	height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #7b8c9f;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 0px 0px 5px;
+}
+#layout-login-wrap {
+	margin: auto;
+	width:400px;
+	color: #b2b2b2;
+}
+#layout-login-box {
+	background-color: #fff;
+	border: 5px solid #CCCCCC;
+	margin-top: 90px;
+	margin-bottom: 5px;
+	
+	-webkit-border-radius: 6px;
+		-khtml-border-radius: 6px;	
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+}
+
+#layout-login-box p {
+		text-indent: 15px;
+	}
+#layout-login-box p:first-letter {
+		font-size:16px;
+	}
+#layout-login-bar {
+	background-image: url(../images/layout/longbarbg.png);
+	height: 25px;
+	color: #fff;
+	padding-left: 10px;
+	font-size: 16px;
+	line-height: 28px;
+}
+#layout-login-form {
+	padding: 15px;
+}
+#layout-login-form b {
+	color: #000;
+}
+#layout-login-form input {
+	border-top-width: 1px;
+
+	border-right-width: 1px;
+
+	border-bottom-width: 1px;
+
+	border-left-width: 1px;
+
+	border-top-style: solid;
+
+	border-right-style: solid;
+
+	border-bottom-style: solid;
+
+	border-left-style: solid;
+
+	border-top-color: #cccccc;
+
+	border-right-color: #cccccc;
+
+	border-bottom-color: #cccccc;
+
+	border-left-color: #cccccc;
+
+	padding-top: 3px;
+
+	padding-right: 3px;
+
+	padding-bottom: 3px;
+
+	padding-left: 3px;
+}
+
+#layout-top-menu {
+	background-image: url(../images/layout/menubg.png);
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: 0px 0px;
+	height: 40px;
+	 
+    position: relative;
+}
+
+#layout-top-menu div.bottom {
+	
+
+	position: absolute; 
+	bottom:0;
+	padding-left: 20px;
+		
+}
+
+#layout-top-menu #tabs span, #layout-top-menu#tabs span.current {
+	/* Shared menu item css */
+	height: 24px;
+	padding: 8px 20px 0px 20px;
+
+	font-weight: bold;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	
+
+	/* Round top left and right corners */
+/*	-webkit-border-top-left-radius: 6px;
+	-khtml-border-radius-topleft: 6px;	
+	-moz-border-radius-topleft: 6px;
+	border-top-left-radius: 6px;
+		
+	-webkit-border-top-right-radius: 6px;
+	-khtml-border-radius-topright: 6px;	
+	-moz-border-radius-topright: 6px;
+	border-top-right-radius: 6px;*/
+}
+
+#layout-top-menu #tabs span.current {
+	/* .current is an autoselector for jquerytools tabs */
+	color: #FFF;
+	background: #758ca2 url(../images/layout/menutab.gif) 100% 0;
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #657587;
+
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #7e8b9a;
+}
+
+#layout-top-menu #tabs span {
+	background: #d4d4d4;
+	color: #919fae;
+	
+	background: #d4d4d4 url(../images/layout/menutab.gif) 100% 100%;
+	
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #2c3d50;
+	
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #8b96a0;
+}
+#layout-top-menu#tabs span:hover {
+	color: #FFF;
+}
+
+#layout-top-menu #tabs div ul li{
+	display: inline;
+}
+
+#layout-top-info {
+	float: right;
+	text-align: right;
+	color: #FFF;
+	padding-top: 2px;
+	padding-right: 5px;
+}
+
+
+#layout-top-bar {
+	height: 25px;
+	background: url(../images/layout/longbarbg.png);
+	border-top-width: 1px;
+
+	border-top-style: solid;
+
+	border-top-color: #8b96a0;
+
+	border-bottom-width: 1px;
+
+	border-bottom-style: solid;
+	padding-left: 20px;
+	border-bottom-color: #7b8c9f;
+	line-height: 28px;
+	color: #FFF;
+}
+
+#layout-top-bar span {
+	padding: 8px 20px 5px 20px;
+}
+#layout-top-bar span:hover {
+	background-color: #5d6c7d;
+}
+
+#wrap {
+	width: 50%;
+	height: 100%;
+}
+#layout-tree {
+	height: 100%;
+	background-color: #f4f4f4;;
+	border-right: 2px solid #FFF;
+	padding: 20px 10px 10px 10px;
+	
+}
+
+#layout-workspace {
+	height: 100%; 
+	padding: 20px 10px 10px 10px;
+	background-color: #f4f4f4;;
+}
+
+#layout-footer {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 10px;
+	display: none;
+}
+
+#browser {
+	width: 230;
+}
+
+.clickable {
+	cursor: pointer;
+}
+.clickable:hover {
+	text-decoration: underline;
+}
+
+
+
+#loading {
+	font-size: 20px;
+	display: none;
+}
+
+#workspace {
+	
+}

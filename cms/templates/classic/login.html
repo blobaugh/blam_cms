@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>cms layout</title>
+	<script src="{{CMS_HTTP_TEMPLATE_DIR}}js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	
+	<script src="{{CMS_HTTP_TEMPLATE_DIR}}js/jquery.tools.min.js"></script>
+	
+	
+   
+	<link rel="stylesheet" href="{{CMS_HTTP_TEMPLATE_DIR}}css/cms-layout.css" />
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+		//	$('body').fadeIn('slow'); // The content of the body is set to hide in css. Show it when ready
+		$('#user').focus();
+		});
+		
+		
+		function validate_user(form) {
+			if(form.password.value == '' && form.user.value != '' && form.pass.value != '') {
+				//alert("{{HTTP_CMS}}api.php?q=login&user="+form.user.value+"&pass="+form.pass.value+';');
+				$.getJSON("{{HTTP_CMS}}api.php?q=login&user="+form.user.value+"&pass="+form.pass.value, function(json){
+					//alert(json);
+				 if(json == true) {
+//					alert('valid login');
+					return true;
+				 }
+				
+				});
+			} 
+			$("#invalid_user").show('slow');
+			//return false;
+		}
+		
+	</script>
+	
+
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+
+<!--<div id="layout-login-top">Welcome to the Blobms 10.4.2 Content Management System</div>-->
+
+<div id="layout-login-wrap">
+<div id="layout-login-box">
+	<div id="layout-login-bar"><img src="{{CMS_HTTP_TEMPLATE_DIR}}images/icons/tux.png" /> Company Name</div>
+	<div id="layout-login-form">
+		<p>Welcome to your custom content management system. Please enter your username and password below. <br /><br />NOTE: username and password are CASE-SENSITIVE</p>
+		<br />
+		<br />
+		<p id="invalid_user" style="display: none; color: red; font-weight: bold; padding: 5px; border: 1px solid red; margin-bottom: 3px; text-align: center">Username or Password was invalid.</p>
+		
+		<form action="cms.php" onsubmit="return validate_user(this)"><input type="text" name="password" style="display: none;">
+			<b>Username:</b>
+			<br /><input type="text" name="user" id="user" style="width: 100%">
+			<br />
+			<br />
+			<b>Password:</b>
+			<br /><input type="password" name="pass" style="width: 100%">
+			<br />
+			<br /><input type="submit" style="float: right;">
+		</form>
+		<br />
+		<br /><a href="recover_password.php">Forgot Password?</a>
+	</div>
+</div>
+(C) 2009 - **NOW** Ben Lobaugh
+</div>
+
+
+</body>
+
+</html>
